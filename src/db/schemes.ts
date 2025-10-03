@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import {WithId} from "mongodb";
-import {ProductType} from "../types/appTypes";
+import {ProductType} from "../types/productType";
 
 export const ProductSchema = new mongoose.Schema<WithId<ProductType>>({
     id: {type: String, required: true },

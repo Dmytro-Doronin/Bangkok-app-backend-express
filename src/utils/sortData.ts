@@ -1,9 +1,8 @@
 import { FilterQuery } from 'mongoose'
-import {ProductType} from "../types/appTypes";
-import {ProductInputModel} from "../types/productType";
+import {FilterType, ProductInputModel} from "../types/productType";
 
-export function buildFilter(sortData: ProductInputModel): FilterQuery<ProductType> {
-    const filter: FilterQuery<ProductType> = {}
+export function buildFilter(sortData: ProductInputModel): FilterQuery<FilterType> {
+    const filter: FilterQuery<FilterType> = {}
 
     if (sortData.productType && sortData.productType !== 'all') {
         filter.productType = sortData.productType
